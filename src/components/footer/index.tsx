@@ -3,7 +3,7 @@ import github from "../../assets/icons/github-sign.png";
 import linkedin from "../../assets/icons/linkedin.png";
 
 function Footer() {
-  return <div className="flex flex-col items-center justify-center gap-4 bg-[var(--bg)]/80 border-t border-[var(--border)] mx-auto w-full-7xl px-6 lg:px:8 py-8">
+  return <footer className="flex flex-col items-center justify-center gap-4 bg-[var(--bg)]/80 border-t border-[var(--border)] mx-auto w-full-7xl px-6 lg:px:8 py-8">
     <div className="flex justify-start font-bold text-lg text-[var(--text)] ">Contact</div>
     <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James</div>
     <div className="flex gap-4 ">
@@ -26,7 +26,7 @@ function Footer() {
     </div>
    <div className="w-[60%] border-b border-[var(--border)]"/>
    <p className="text-[var(--text-h)] text-sm">Designed & Built by Huong Cao · React / TypeScript</p>
-  </div>;
+  </footer>;
 }
 
 export default Footer;

@@ -19,7 +19,8 @@ function Header() {
   const [active, setActive] = useState("home");
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-[var(--bg)]/80 border-b border-[var(--border)]">
+    <header>
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[var(--bg)]/80 border-b border-[var(--border)]">
       <div className="flex justify-end items-center gap-1 mx-auto max-w-7xl px-6 lg:px-8 py-3">
         {navItems.map(({ id, label, icon: Icon }) => {
           const isActive = active === id;
@@ -33,7 +34,7 @@ function Header() {
                 ${
                   isActive
                     ? "bg-[#FD6F00]/10 text-[#FD6F00]"
-                    : "text-[var(--text)] hover:text-[var(--text-h)] hover:bg-[var(--border)]/50"
+                    : "text-[var(--text-secondary)] hover:text-[var(--text)] hover:bg-[var(--border)]/50"
                 }
               `}
             >
@@ -44,6 +45,8 @@ function Header() {
         })}
       </div>
     </nav>
+    </header>
+    
   );
 }
 

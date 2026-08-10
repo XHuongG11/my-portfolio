@@ -1,52 +1,132 @@
 @import "tailwindcss";
 
 :root {
-  --text: #000000;
-  --text-h: #292929;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #FD853A;
-  --accent-bg: rgba(253, 133, 58, 0.1);
-  --accent-border: rgba(253, 133, 58, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* ========================================
+     BRAND / ACCENT
+     ======================================== */
+  --accent: #FA6E00;
+  --accent-hover: #E86100;
+  --accent-active: #D95600;
 
+  --accent-bg: rgba(250, 110, 0, 0.10);
+  --accent-bg-hover: rgba(250, 110, 0, 0.16);
+  --accent-border: rgba(250, 110, 0, 0.45);
+
+
+  /* ========================================
+     BACKGROUND
+     ======================================== */
+  --bg: #FFFFFF;
+  --bg-secondary: #F7F7F7;
+  --bg-tertiary: #F0F0F0;
+
+
+  /* ========================================
+     TEXT
+     ======================================== */
+  --text: #171717;
+  --text-secondary: #525252;
+  --text-muted: #737373;
+  --text-disabled: #A3A3A3;
+
+
+  /* ========================================
+     BORDER
+     ======================================== */
+  --border: #E5E5E5;
+  --border-hover: #D4D4D4;
+
+
+  /* ========================================
+     SURFACE / CARD
+     ======================================== */
+  --card-bg: #FFFFFF;
+  --social-bg: #F4F4F4;
+
+
+  /* ========================================
+     SHADOW
+     ======================================== */
+  --shadow:
+    rgba(0, 0, 0, 0.08) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
+
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+
   color: var(--text);
   background: var(--bg);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #FD6F00;
-    --accent-bg: rgba(253, 133, 58, 0.15);
-    --accent-border: rgba(253, 133, 58, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
+    /* ========================================
+       BRAND / ACCENT
+       ======================================== */
+    --accent: #FA6E00;
+    --accent-hover: #FF7D1A;
+    --accent-active: #E86100;
+
+    --accent-bg: rgba(250, 110, 0, 0.12);
+    --accent-bg-hover: rgba(250, 110, 0, 0.18);
+    --accent-border: rgba(250, 110, 0, 0.45);
+
+
+    /* ========================================
+       BACKGROUND
+       ======================================== */
+    --bg: #101010;
+    --bg-secondary: #161616;
+    --bg-tertiary: #1D1D1D;
+
+
+    /* ========================================
+       TEXT
+       ======================================== */
+    --text: #F5F5F5;
+    --text-secondary: #B3B3B3;
+    --text-muted: #858585;
+    --text-disabled: #555555;
+
+
+    /* ========================================
+       BORDER
+       ======================================== */
+    --border: #2D2D2D;
+    --border-hover: #3D3D3D;
+
+
+    /* ========================================
+       SURFACE / CARD
+       ======================================== */
+    --card-bg: #181818;
+    --social-bg: rgba(255, 255, 255, 0.06);
+
+
+    /* ========================================
+       SHADOW
+       ======================================== */
     --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+      rgba(0, 0, 0, 0.45) 0 10px 15px -3px,
+      rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 }
+
+
 
 body {
   margin: 0;
@@ -56,7 +136,7 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: var(--text);
 }
 
 h1 {
