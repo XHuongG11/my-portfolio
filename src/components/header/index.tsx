@@ -28,16 +28,16 @@ function Header() {
               key={id}
               onClick={() => setActive(id)}
               className={`
-                flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium
+                flex items-center gap-1.5 px-4 py-2 rounded-[10px] text-sm font-medium
                 transition-all duration-300 cursor-pointer border-none outline-none
                 ${
                   isActive
-                    ? "bg-[#FD853A]/10 text-[#FD853A]"
+                    ? "bg-[#FD6F00]/10 text-[#FD6F00]"
                     : "text-[var(--text)] hover:text-[var(--text-h)] hover:bg-[var(--border)]/50"
                 }
               `}
             >
-              {isActive && <Icon size={16} strokeWidth={2.5} />}
+              {isActive && <Icon className="animate-slide-in-left" size={16} strokeWidth={2.5} />}
               {label}
             </button>
           );

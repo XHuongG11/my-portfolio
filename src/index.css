@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #000000;
+  --text-h: #292929;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
@@ -39,16 +39,12 @@
     --bg: #16171d;
     --border: #2e303a;
     --code-bg: #1f2028;
-    --accent: #FD853A;
+    --accent: #FD6F00;
     --accent-bg: rgba(253, 133, 58, 0.15);
     --accent-border: rgba(253, 133, 58, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
   }
 }
 
@@ -83,4 +79,52 @@ h2 {
 }
 p {
   margin: 0;
+}
+
+
+/* Animation */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out forwards;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out forwards;
+}
+
+
+/* Components */
+@layer components {
+  .social-icon {
+    @apply flex h-8 w-8 items-center justify-center rounded-full
+           border border-[#d4d4d4]
+           p-1
+           bg-[#f7f7f7]
+           text-[var(--text-muted)]
+           transition-all duration-300
+           hover:scale-110 
+           hover:text-[var(--accent)];
+  }
 }
