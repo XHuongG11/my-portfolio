@@ -1,28 +1,18 @@
-import { Download, ArrowRight } from "lucide-react";
-import avatar from "../../assets/avatar.png";
-import github from "../../assets/icons/github-sign.png";
-import linkedin from "../../assets/icons/linkedin.png";
+import { ArrowRight, Download } from "lucide-react";
+import avatar from "../../assets/avatar.jpg";
 
 function HomePage() {
   return (
     <section className="relative min-h-[calc(100vh-69px)] bg-[var(--bg)] overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--bg)] via-[var(--bg-secondary)] to-[var(--bg)]" />
-
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 py-16 lg:py-24">
         {/* Left Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left animate-slide-in-left">
-          {/* Greeting */}
           <p className="text-[var(--text-muted)] text-lg">
             Hi, I am
           </p>
-
-          {/* Name */}
           <h1 className="text-[var(--text)] text-5xl lg:text-6xl font-bold tracking-tight !my-2">
             Huong Cao
           </h1>
-
-          {/* Role */}
           <h2 className="text-[var(--accent)] text-3xl lg:text-5xl font-bold tracking-tight !mb-4">
             Frontend Developer
           </h2>
@@ -32,39 +22,34 @@ function HomePage() {
             A passionate Frontend Developer Intern crafting beautiful, responsive, and user-friendly web experiences with modern technologies.
           </p>
 
-          {/* CTA Buttons */}
+          {/* Buttons */}
           <div className="flex gap-4 justify-center lg:justify-start pt-4">
-            <a
-              href="#projects"
-              className="group flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--accent)] text-white font-semibold text-sm transition-all duration-300 hover:bg-[var(--accent-hover)] hover:shadow-[0_0_25px_rgba(250,110,0,0.4)] hover:scale-105 no-underline"
+            <button
+              className="group flex items-center gap-2 px-6 py-3 rounded-lg 
+              bg-[var(--accent)] text-white font-semibold text-sm 
+              transition-all duration-300 
+              hover:bg-[var(--accent-hover)] 
+              hover:shadow-[0_0_25px_rgba(250,110,0,0.4)] 
+              hover:scale-105 "
             >
-              View Projects
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
+              Profile Details
+              <ArrowRight size={16} className="transition-transform duration-300 
+              group-hover:translate-x-1" />
+            </button>
             <a
               href="/cv.pdf"
               download
-              className="group flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] font-semibold text-sm transition-all duration-300 hover:border-[var(--border-hover)] hover:text-[var(--text)] hover:scale-105 no-underline"
+              className="group flex items-center gap-2 px-6 py-3 
+              rounded-lg border border-[var(--border)] 
+              text-[var(--text-secondary)] 
+              font-semibold text-sm 
+              transition-all duration-300 
+              hover:border-[var(--border-hover)] 
+              hover:text-[var(--text)] hover:scale-105"
             >
               <Download size={16} />
               Download CV
             </a>
-          </div>
-
-          {/* Stats */}
-          <div className="flex gap-0 justify-center lg:justify-start pt-6">
-            <div className="pr-6 border-r border-[var(--border)]">
-              <span className="block text-[var(--accent)] text-2xl font-bold">1+</span>
-              <span className="text-[var(--text-muted)] text-sm">Year Learning</span>
-            </div>
-            <div className="px-6 border-r border-[var(--border)]">
-              <span className="block text-[var(--accent)] text-2xl font-bold">5+</span>
-              <span className="text-[var(--text-muted)] text-sm">Projects Done</span>
-            </div>
-            <div className="pl-6">
-              <span className="block text-[var(--accent)] text-2xl font-bold">3+</span>
-              <span className="text-[var(--text-muted)] text-sm">Technologies</span>
-            </div>
           </div>
         </div>
 
@@ -79,11 +64,6 @@ function HomePage() {
               <div className="w-[380px] h-[380px] lg:w-[490px] lg:h-[490px] rounded-full border border-[var(--border)]/30" />
             </div>
 
-            {/* Accent glow behind avatar */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[280px] h-[280px] lg:w-[360px] lg:h-[360px] rounded-full bg-[var(--accent)]/5 blur-3xl" />
-            </div>
-
             {/* Avatar image */}
             <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden border-2 border-[var(--border)]/50">
               <img
@@ -93,7 +73,7 @@ function HomePage() {
               />
             </div>
 
-            {/* Floating accent dot */}
+            {/*  accent dot */}
             <div className="absolute top-8 right-4 w-3 h-3 rounded-full bg-[var(--accent)] animate-pulse" />
             <div className="absolute bottom-12 left-2 w-2 h-2 rounded-full bg-[var(--accent)]/60 animate-pulse" />
           </div>

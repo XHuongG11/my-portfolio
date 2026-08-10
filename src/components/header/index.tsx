@@ -6,6 +6,7 @@ import {
   Briefcase,
   Mail,
 } from "lucide-react";
+import ThemeToggle from "../theme-toggle";
 
 const navItems = [
   { id: "home", label: "Home", icon: House },
@@ -43,6 +44,9 @@ function Header() {
             </button>
           );
         })}
+        <div className="ml-2 pl-3 border-l border-[var(--border)]">
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
     </header>

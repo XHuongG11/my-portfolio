@@ -72,8 +72,7 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
+:root.dark {
     /* ========================================
        BRAND / ACCENT
        ======================================== */
@@ -123,7 +122,6 @@
     --shadow:
       rgba(0, 0, 0, 0.45) 0 10px 15px -3px,
       rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
 }
 
 
@@ -192,6 +190,20 @@ p {
 }
 .animate-slide-in-left {
   animation: slide-in-left 0.5s ease-out forwards;
+}
+
+@keyframes spin-in {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+.animate-spin-in {
+  animation: spin-in 0.35s ease-out forwards;
 }
 
 
