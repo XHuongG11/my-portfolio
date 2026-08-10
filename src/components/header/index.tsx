@@ -1,34 +1,38 @@
-import { useState } from "react";
 import {
-  House,
-  Wrench,
   FolderGit2,
-  Briefcase,
+  House,
   Mail,
+  Wrench
 } from "lucide-react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ThemeToggle from "../theme-toggle";
 
 const navItems = [
-  { id: "home", label: "Home", icon: House },
-  { id: "skills", label: "Skills", icon: Wrench },
-  { id: "projects", label: "Projects", icon: FolderGit2 },
-  { id: "experience", label: "Experience", icon: Briefcase },
-  { id: "contact", label: "Contact", icon: Mail },
+  { id: "home", label: "Home", icon: House, url: "/" },
+  { id: "skills", label: "Skills", icon: Wrench, url: "/skills" },
+  { id: "projects", label: "Projects", icon: FolderGit2, url: "/projects" },
+  { id: "contact", label: "Contact", icon: Mail, url: "/contact" },
 ];
 
 function Header() {
+  const navigate = useNavigate();
+  const handleClickNav = (url: string, id: string) => {
+    navigate(url);
+    setActive(id);
+  }
   const [active, setActive] = useState("home");
 
   return (
     <header>
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-[var(--bg)]/80 border-b border-[var(--border)]">
       <div className="flex justify-end items-center gap-1 mx-auto max-w-7xl px-6 lg:px-8 py-3">
-        {navItems.map(({ id, label, icon: Icon }) => {
+        {navItems.map(({ id, label, icon: Icon, url }) => {
           const isActive = active === id;
           return (
             <button
               key={id}
-              onClick={() => setActive(id)}
+              onClick={() => handleClickNav(url, id)}
               className={`
                 flex items-center gap-1.5 px-4 py-2 rounded-[10px] text-sm font-medium
                 transition-all duration-300 cursor-pointer border-none outline-none
