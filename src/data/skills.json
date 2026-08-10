@@ -1,0 +1,152 @@
+{
+  "technical": [
+    {
+      "category": "Languages",
+      "skills": [
+        {
+          "name": "Java",
+          "level": "Advanced",
+          "percentage": 85
+        },
+        {
+          "name": "TypeScript",
+          "level": "Intermediate",
+          "percentage": 75
+        },
+        {
+          "name": "HTML5",
+          "level": "Advanced",
+          "percentage": 85
+        },
+        {
+          "name": "CSS3",
+          "level": "Advanced",
+          "percentage": 80
+        },
+        {
+          "name": "SQL",
+          "level": "Intermediate",
+          "percentage": 70
+        }
+      ]
+    },
+    {
+      "category": "Frameworks / Libraries",
+      "skills": [
+        {
+          "name": "ReactJS",
+          "level": "Advanced",
+          "percentage": 85
+        },
+        {
+          "name": "Spring Boot",
+          "level": "Advanced",
+          "percentage": 85
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": "Intermediate",
+          "percentage": 75
+        },
+        {
+          "name": "Material UI",
+          "level": "Intermediate",
+          "percentage": 75
+        },
+        {
+          "name": "React Hook Form",
+          "level": "Intermediate",
+          "percentage": 70
+        },
+        {
+          "name": "Yup",
+          "level": "Intermediate",
+          "percentage": 65
+        },
+        {
+          "name": "Redux Toolkit",
+          "level": "Intermediate",
+          "percentage": 65
+        },
+        {
+          "name": ".NET Minimal API",
+          "level": "Intermediate",
+          "percentage": 65
+        },
+        {
+          "name": "Entity Framework Core",
+          "level": "Intermediate",
+          "percentage": 65
+        },
+        {
+          "name": "Keycloak",
+          "level": "Intermediate",
+          "percentage": 70
+        }
+      ]
+    },
+    {
+      "category": "Tools",
+      "skills": [
+        {
+          "name": "Git",
+          "level": "Advanced",
+          "percentage": 85
+        },
+        {
+          "name": "Docker",
+          "level": "Intermediate",
+          "percentage": 70
+        },
+        {
+          "name": "Postman",
+          "level": "Advanced",
+          "percentage": 85
+        },
+        {
+          "name": "Figma",
+          "level": "Intermediate",
+          "percentage": 65
+        },
+        {
+          "name": "Draw.io",
+          "level": "Intermediate",
+          "percentage": 70
+        },
+        {
+          "name": "n8n",
+          "level": "Intermediate",
+          "percentage": 60
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "skills": [
+        {
+          "name": "MySQL",
+          "level": "Intermediate",
+          "percentage": 75
+        },
+        {
+          "name": "SQL Server",
+          "level": "Intermediate",
+          "percentage": 75
+        }
+      ]
+    }
+  ],
+  "softSkills": [
+    "Problem Solving",
+    "Teamwork",
+    "Communication",
+    "Adaptability",
+    "Time Management"
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "TOEIC Reading & Listening (515), Basic Communication"
+    }
+  ]
+}

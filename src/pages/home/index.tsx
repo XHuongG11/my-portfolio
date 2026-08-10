@@ -8,7 +8,7 @@ function HomePage() {
 
   return (
     <section className="relative min-h-[calc(100vh-69px)] bg-[var(--bg)] overflow-hidden">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 py-16 lg:py-24">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-12 py-16 lg:py-24">
 
         {/* Left Content */}
         {!showProfile ? (
