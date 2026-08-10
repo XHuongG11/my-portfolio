@@ -1,57 +1,68 @@
+import { useState } from "react";
 import { ArrowRight, Download } from "lucide-react";
 import avatar from "../../assets/avatar.jpg";
+import ProfileDetail from "./ProfileDetail";
 
 function HomePage() {
+  const [showProfile, setShowProfile] = useState(false);
+
   return (
     <section className="relative min-h-[calc(100vh-69px)] bg-[var(--bg)] overflow-hidden">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12 py-16 lg:py-24">
+
         {/* Left Content */}
-        <div className="flex-1 space-y-6 text-center lg:text-left animate-slide-in-left">
-          <p className="text-[var(--text-muted)] text-lg">
-            Hi, I am
-          </p>
-          <h1 className="text-[var(--text)] text-5xl lg:text-6xl font-bold tracking-tight !my-2">
-            Huong Cao
-          </h1>
-          <h2 className="text-[var(--accent)] text-3xl lg:text-5xl font-bold tracking-tight !mb-4">
-            Frontend Developer
-          </h2>
+        {!showProfile ? (
+          <div className="flex-1 space-y-6 text-center lg:text-left animate-slide-in-left" key="intro">
+            <p className="text-[var(--text-muted)] text-lg">
+              Hi, I am
+            </p>
+            <h1 className="text-[var(--text)] text-5xl lg:text-6xl font-bold tracking-tight !my-2">
+              Huong Cao
+            </h1>
+            <h2 className="text-[var(--accent)] text-3xl lg:text-5xl font-bold tracking-tight !mb-4">
+              Frontend Developer
+            </h2>
 
-          {/* Short intro */}
-          <p className="text-[var(--text-muted)] text-base lg:text-lg max-w-lg leading-relaxed">
-            A passionate Frontend Developer Intern crafting beautiful, responsive, and user-friendly web experiences with modern technologies.
-          </p>
+            {/* Short intro */}
+            <p className="text-[var(--text-muted)] text-base lg:text-lg max-w-lg leading-relaxed">
+              A passionate Frontend Developer Intern crafting beautiful, responsive, and user-friendly web experiences with modern technologies.
+            </p>
 
-          {/* Buttons */}
-          <div className="flex gap-4 justify-center lg:justify-start pt-4">
-            <button
-              className="group flex items-center gap-2 px-6 py-3 rounded-lg 
-              bg-[var(--accent)] text-white font-semibold text-sm 
-              transition-all duration-300 
-              hover:bg-[var(--accent-hover)] 
-              hover:shadow-[0_0_25px_rgba(250,110,0,0.4)] 
-              hover:scale-105 "
-            >
-              Profile Details
-              <ArrowRight size={16} className="transition-transform duration-300 
-              group-hover:translate-x-1" />
-            </button>
-            <a
-              href="/cv.pdf"
-              download
-              className="group flex items-center gap-2 px-6 py-3 
-              rounded-lg border border-[var(--border)] 
-              text-[var(--text-secondary)] 
-              font-semibold text-sm 
-              transition-all duration-300 
-              hover:border-[var(--border-hover)] 
-              hover:text-[var(--text)] hover:scale-105"
-            >
-              <Download size={16} />
-              Download CV
-            </a>
+            {/* Buttons */}
+            <div className="flex gap-4 justify-center lg:justify-start pt-4">
+              <button
+                onClick={() => setShowProfile(true)}
+                className="group flex items-center gap-2 px-6 py-3 rounded-lg 
+                bg-[var(--accent)] text-white font-semibold text-sm 
+                cursor-pointer border-none outline-none
+                transition-all duration-300 
+                hover:bg-[var(--accent-hover)] 
+                hover:shadow-[0_0_25px_rgba(250,110,0,0.4)] 
+                hover:scale-105"
+              >
+                Profile Details
+                <ArrowRight size={16} className="transition-transform duration-300 
+                group-hover:translate-x-1" />
+              </button>
+              <a
+                href="/cv.pdf"
+                download
+                className="group flex items-center gap-2 px-6 py-3 
+                rounded-lg border border-[var(--border)] 
+                text-[var(--text-secondary)] 
+                font-semibold text-sm 
+                transition-all duration-300 
+                hover:border-[var(--border-hover)] 
+                hover:text-[var(--text)] hover:scale-105"
+              >
+                <Download size={16} />
+                Download CV
+              </a>
+            </div>
           </div>
-        </div>
+        ) : (
+          <ProfileDetail key="profile" onBack={() => setShowProfile(false)} />
+        )}
 
         {/* Right Content - Avatar */}
         <div className="flex-1 flex justify-center lg:justify-end animate-slide-in-right">
@@ -84,4 +95,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
