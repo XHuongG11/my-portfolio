@@ -1,8 +1,18 @@
-import { Lightbulb, MessageCircle, Puzzle, RefreshCw, Timer, Users } from "lucide-react";
-import SectionCard from "../../components/cards/section-card";
+import {
+  Lightbulb,
+  MessageCircle,
+  Puzzle,
+  RefreshCw,
+  Timer,
+  Users,
+} from "lucide-react";
+import SectionCard from "../../common/SectionCard";
 
 /* Icon map for soft skills */
-const softSkillIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const softSkillIcons: Record<
+  string,
+  React.ComponentType<{ size?: number; className?: string }>
+> = {
   "Problem Solving": Lightbulb,
   Teamwork: Users,
   Communication: MessageCircle,

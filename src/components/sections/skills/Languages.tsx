@@ -1,6 +1,5 @@
 import { Globe } from "lucide-react";
-import SectionCard from "../../components/cards/section-card";
-import type { Language } from "../../types/profile";
+import SectionCard from "../../common/SectionCard";
 
 function Languages({ languages }: { languages: Language[] }) {
   return (
@@ -16,8 +15,12 @@ function Languages({ languages }: { languages: Language[] }) {
               <Globe size={18} />
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="text-sm font-semibold text-[var(--text)]">{lang.name}</span>
-              <span className="text-xs text-[var(--text-muted)]">{lang.level}</span>
+              <span className="text-sm font-semibold text-[var(--text)]">
+                {lang.name}
+              </span>
+              <span className="text-xs text-[var(--text-muted)]">
+                {lang.level}
+              </span>
             </div>
           </div>
         ))}

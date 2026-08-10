@@ -1,10 +1,12 @@
 import { useState } from "react";
-import type { Skill, SkillCategory } from "../../types/profile";
-import SectionCard from "../../components/cards/section-card";
+import SectionCard from "../../common/SectionCard";
 import { FileCode, Layers, Star, Wrench } from "lucide-react";
 
 /* Icon map for categories */
-const categoryIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+const categoryIcons: Record<
+  string,
+  React.ComponentType<{ size?: number; className?: string }>
+> = {
   Languages: FileCode,
   "Frameworks / Libraries": Layers,
   Tools: Wrench,
@@ -40,10 +42,7 @@ function TechnicalSkills({ categories }: { categories: SkillCategory[] }) {
       </div>
 
       {/* Skills list */}
-      <div
-        key={activeCategory.category}
-        className="flex flex-col gap-2.5"
-      >
+      <div key={activeCategory.category} className="flex flex-col gap-2.5">
         {activeCategory.skills.map((skill, i) => (
           <SkillRow key={skill.name} skill={skill} index={i} />
         ))}
@@ -66,7 +65,13 @@ function percentageToStars(pct: number): number {
   return Math.max(1, Math.min(MAX_STARS, Math.round(pct / 20)));
 }
 
-function StarRating({ filled, total = MAX_STARS }: { filled: number; total?: number }) {
+function StarRating({
+  filled,
+  total = MAX_STARS,
+}: {
+  filled: number;
+  total?: number;
+}) {
   return (
     <div className="flex items-center gap-[3px] shrink-0">
       {Array.from({ length: total }, (_, i) => (
@@ -96,8 +101,12 @@ function SkillRow({ skill, index }: { skill: Skill; index: number }) {
       style={{ animationDelay: `${index * 80}ms` }}
     >
       <div className="flex items-center gap-2 min-w-0">
-        <span className="text-[0.8125rem] font-medium text-[var(--text)] whitespace-nowrap">{skill.name}</span>
-        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[0.625rem] font-semibold tracking-[0.3px] uppercase ${badgeClassMap[levelClass] || "bg-[var(--bg-secondary)] text-[var(--text-muted)]"}`}>
+        <span className="text-[0.8125rem] font-medium text-[var(--text)] whitespace-nowrap">
+          {skill.name}
+        </span>
+        <span
+          className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[0.625rem] font-semibold tracking-[0.3px] uppercase ${badgeClassMap[levelClass] || "bg-[var(--bg-secondary)] text-[var(--text-muted)]"}`}
+        >
           {skill.level}
         </span>
       </div>

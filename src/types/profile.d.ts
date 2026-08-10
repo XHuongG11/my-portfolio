@@ -1,31 +1,28 @@
-export type SkillLevel =
-  | "Beginner"
-  | "Intermediate"
-  | "Advanced";
+type SkillLevel = "Beginner" | "Intermediate" | "Advanced";
 
-export interface Skill {
+interface Skill {
   name: string;
   level: SkillLevel;
   percentage: number;
 }
 
-export interface SkillCategory {
+interface SkillCategory {
   category: string;
   skills: Skill[];
 }
 
-export interface Language {
+interface Language {
   name: string;
   level: string;
 }
 
-export interface SkillsData {
+interface SkillsData {
   technical: SkillCategory[];
   softSkills: string[];
   languages: Language[];
 }
 
-export interface ProjectLinks {
+interface ProjectLinks {
   github?: {
     backend?: string;
     frontend?: string;
@@ -33,7 +30,7 @@ export interface ProjectLinks {
   demo?: string;
 }
 
-export interface Project {
+interface Project {
   id: number;
   name: string;
   role: string;
@@ -41,11 +38,11 @@ export interface Project {
   description: string;
   thumbnail: string;
   technologies: string[];
-  highlights: string[];
+  highlights?: string[];
   links: ProjectLinks;
 }
 
-export interface Experience {
+interface Experience {
   id: number;
   company: string;
   position: string;
