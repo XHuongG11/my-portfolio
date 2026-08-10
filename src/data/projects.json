@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Roadmap Website",
+    "role": "Full-Stack Developer",
+    "period": "Sept 2025 – June 2026",
+    "description": "A learning roadmap platform that supports roadmap management, real-time collaborative editing, AI-powered Q&A, and automated roadmap generation.",
+    "technologies": [
+      "ReactJS",
+      "TypeScript",
+      "Spring Boot",
+      "Keycloak",
+      "Yjs",
+      "Docker",
+      "Spring AI",
+      "n8n"
+    ],
+    "thumbnail": "/projects/roadmap-website.png",
+    "features": [
+      "Built responsive interfaces for managing learning roadmaps, node content, and user interactions.",
+      "Integrated Yjs for real-time collaborative document editing and synchronization.",
+      "Implemented secure authentication and authorization with Keycloak.",
+      "Developed an AI-powered Q&A module using Spring AI and RAG.",
+      "Built n8n workflows for automated learning roadmap generation."
+    ],
+    "links": {
+      "github": "https://github.com/XHuongG11/roadmap-website",
+      "demo": "https://roadmap.memap.id.vn"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jewelry E-Commerce System",
+    "role": "Full-Stack Developer",
+    "period": "Feb 2025 – May 2025",
+    "description": "A full-stack e-commerce platform for jewelry products with secure authentication, email verification, and online payment integration.",
+    "technologies": [
+      "Spring Boot",
+      "ReactJS",
+      "MySQL",
+      "Spring Security",
+      "JWT",
+      "Material UI",
+      "React Hook Form",
+      "Yup"
+    ],
+    "thumbnail": "/projects/jewelry-ecommerce.png",
+    "features": [
+      "Developed responsive user interfaces and integrated RESTful APIs.",
+      "Implemented JWT authentication with Spring Security custom filters.",
+      "Integrated email verification and MoMo Payment Gateway.",
+      "Built client-side form validation using React Hook Form and Yup.",
+      "Designed UML diagrams including Class, Use Case, Sequence, and Collaboration diagrams."
+    ],
+    "links": {
+      "github": {
+        "backend": "https://github.com/XHuongG11/jewelry",
+        "frontend": "https://github.com/XHuongG11/shiny-website-ui"
+      },
+      "demo": ""
+    }
+  }
+]

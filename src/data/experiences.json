@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "company": "Hitek Solution",
+    "position": "Software Developer Intern",
+    "period": "July 2025 – October 2025",
+    "location": "",
+    "description": "Worked on web application development and payment integration during a software development internship.",
+    "responsibilities": [
+      "Built and optimized a Map Tracking Web Application using .NET Minimal API, Entity Framework Core, and SQL Server.",
+      "Researched and integrated a secure, real-time QR-based payment module with BIDV Bank API, ensuring seamless transaction handling."
+    ],
+    "technologies": [
+      ".NET Minimal API",
+      "Entity Framework Core",
+      "SQL Server"
+    ]
+  }
+]

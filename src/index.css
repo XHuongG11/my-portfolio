@@ -4,22 +4,20 @@
   /* ========================================
      BRAND / ACCENT
      ======================================== */
-  --accent: #FA6E00;
-  --accent-hover: #E86100;
-  --accent-active: #D95600;
+  --accent: #fa6e00;
+  --accent-hover: #e86100;
+  --accent-active: #d95600;
 
-  --accent-bg: rgba(250, 110, 0, 0.10);
+  --accent-bg: rgba(250, 110, 0, 0.1);
   --accent-bg-hover: rgba(250, 110, 0, 0.16);
   --accent-border: rgba(250, 110, 0, 0.45);
-
 
   /* ========================================
      BACKGROUND
      ======================================== */
-  --bg: #FFFFFF;
-  --bg-secondary: #F7F7F7;
-  --bg-tertiary: #F0F0F0;
-
+  --bg: #ffffff;
+  --bg-secondary: #f7f7f7;
+  --bg-tertiary: #f0f0f0;
 
   /* ========================================
      TEXT
@@ -27,30 +25,25 @@
   --text: #171717;
   --text-secondary: #525252;
   --text-muted: #737373;
-  --text-disabled: #A3A3A3;
-
+  --text-disabled: #a3a3a3;
 
   /* ========================================
      BORDER
      ======================================== */
-  --border: #E5E5E5;
-  --border-hover: #D4D4D4;
-
+  --border: #e5e5e5;
+  --border-hover: #d4d4d4;
 
   /* ========================================
      SURFACE / CARD
      ======================================== */
-  --card-bg: #FFFFFF;
-  --social-bg: #F4F4F4;
-
+  --card-bg: #ffffff;
+  --social-bg: #f4f4f4;
 
   /* ========================================
      SHADOW
      ======================================== */
   --shadow:
-    rgba(0, 0, 0, 0.08) 0 10px 15px -3px,
-    rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
-
+    rgba(0, 0, 0, 0.08) 0 10px 15px -3px, rgba(0, 0, 0, 0.04) 0 4px 6px -2px;
 
   /* ========================================
      TYPOGRAPHY
@@ -59,8 +52,8 @@
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
+  font: 16px/150% var(--sans);
+  letter-spacing: 0.15px;
 
   color: var(--text);
   background: var(--bg);
@@ -71,102 +64,79 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 :root.dark {
-    /* ========================================
-       BRAND / ACCENT
-       ======================================== */
-    --accent: #FA6E00;
-    --accent-hover: #FF7D1A;
-    --accent-active: #E86100;
+  /* ========================================
+     BRAND / ACCENT
+     ======================================== */
+  --accent: #fa6e00;
+  --accent-hover: #ff7d1a;
+  --accent-active: #e86100;
 
-    --accent-bg: rgba(250, 110, 0, 0.12);
-    --accent-bg-hover: rgba(250, 110, 0, 0.18);
-    --accent-border: rgba(250, 110, 0, 0.45);
+  --accent-bg: rgba(250, 110, 0, 0.12);
+  --accent-bg-hover: rgba(250, 110, 0, 0.18);
+  --accent-border: rgba(250, 110, 0, 0.45);
 
+  /* ========================================
+     BACKGROUND
+     ======================================== */
+  --bg: #101010;
+  --bg-secondary: #161616;
+  --bg-tertiary: #1d1d1d;
 
-    /* ========================================
-       BACKGROUND
-       ======================================== */
-    --bg: #101010;
-    --bg-secondary: #161616;
-    --bg-tertiary: #1D1D1D;
+  /* ========================================
+     TEXT
+     ======================================== */
+  --text: #f5f5f5;
+  --text-secondary: #b3b3b3;
+  --text-muted: #858585;
+  --text-disabled: #555555;
 
+  /* ========================================
+     BORDER
+     ======================================== */
+  --border: #2d2d2d;
+  --border-hover: #3d3d3d;
 
-    /* ========================================
-       TEXT
-       ======================================== */
-    --text: #F5F5F5;
-    --text-secondary: #B3B3B3;
-    --text-muted: #858585;
-    --text-disabled: #555555;
+  /* ========================================
+     SURFACE / CARD
+     ======================================== */
+  --card-bg: #181818;
+  --social-bg: rgba(255, 255, 255, 0.06);
 
-
-    /* ========================================
-       BORDER
-       ======================================== */
-    --border: #2D2D2D;
-    --border-hover: #3D3D3D;
-
-
-    /* ========================================
-       SURFACE / CARD
-       ======================================== */
-    --card-bg: #181818;
-    --social-bg: rgba(255, 255, 255, 0.06);
-
-
-    /* ========================================
-       SHADOW
-       ======================================== */
-    --shadow:
-      rgba(0, 0, 0, 0.45) 0 10px 15px -3px,
-      rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  /* ========================================
+     SHADOW
+     ======================================== */
+  --shadow:
+    rgba(0, 0, 0, 0.45) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
 }
-
-
 
 body {
   margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
+  background-color: var(--bg);
   color: var(--text);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  color: var(--text);
+  margin: 0;
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
+
 p {
   margin: 0;
 }
 
-
-/* Animation */
+/* Animations */
 @keyframes slide-in-right {
   from {
     opacity: 0;
     transform: translateX(30px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -174,6 +144,7 @@ p {
 }
 
 .animate-slide-in-right {
+  opacity: 0;
   animation: slide-in-right 0.5s ease-out forwards;
 }
 
@@ -182,14 +153,31 @@ p {
     opacity: 0;
     transform: translateX(-30px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 .animate-slide-in-left {
+  opacity: 0;
   animation: slide-in-left 0.5s ease-out forwards;
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in-up {
+  opacity: 0;
+  animation: slide-in-up 0.6s ease-out forwards;
 }
 
 @keyframes spin-in {
@@ -202,22 +190,22 @@ p {
     transform: rotate(0deg) scale(1);
   }
 }
+
 .animate-spin-in {
   animation: spin-in 0.35s ease-out forwards;
 }
 
-
 /* Components */
 @layer components {
   .social-icon {
-    @apply flex h-8 w-8 items-center justify-center rounded-full
-           border border-[#d4d4d4]
-           p-1
-           bg-[#f7f7f7]
+    @apply flex h-9 w-9 items-center justify-center rounded-full
+           border border-[var(--border)]
+           bg-[var(--bg-secondary)]
            text-[var(--text-muted)]
            transition-all duration-300
            hover:scale-110 
-           hover:text-[var(--accent)];
+           hover:text-[var(--accent)]
+           hover:border-[var(--accent-border)];
   }
 }
 
