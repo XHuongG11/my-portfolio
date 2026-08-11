@@ -93,11 +93,11 @@ npm run preview
 
 <p align="center">
   <img
-    src="https://github.com/XHuongG11/portfolio-assets/main/home-light-page.png"
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/home-light-page.png"
     width="49%"
   />
   <img
-    src="https://github.com/XHuongG11/portfolio-assets/main/home-dark-page.png"
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/home-dark-page.png"
     width="49%"
   />
 </p>
@@ -106,7 +106,7 @@ npm run preview
 
 <p align="center">
   <img
-    src="https://github.com/XHuongG11/portfolio-assets/main/projects-page.png"
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/projects-page.png"
     width="90%"
   />
 </p>
@@ -115,7 +115,7 @@ npm run preview
 
 <p align="center">
   <img
-    src="https://github.com/XHuongG11/portfolio-assets/main/filter-mobile.png"
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/filter-mobile.png"
     width="40%"
   />
 </p>
@@ -124,7 +124,7 @@ npm run preview
 
 <p align="center">
   <img
-    src="https://github.com/XHuongG11/portfolio-assets/main/contact-form.png"
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/contact-form.png"
     width="90%"
   />
 </p>
