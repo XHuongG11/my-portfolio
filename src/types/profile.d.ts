@@ -1,3 +1,8 @@
+interface TechFilter {
+  id: number;
+  name: string;
+}
+
 type SkillLevel = "Beginner" | "Intermediate" | "Advanced";
 
 interface Skill {
@@ -23,10 +28,7 @@ interface SkillsData {
 }
 
 interface ProjectLinks {
-  github?: {
-    backend?: string;
-    frontend?: string;
-  };
+  github?: string;
   demo?: string;
 }
 
