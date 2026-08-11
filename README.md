@@ -55,8 +55,9 @@ npm run preview
 
 ## ✨ Danh Sách Tính Năng Đã Làm (Features)
 
-1. **Điều hướng Trang (Routing & Navigation)**:
+1. **Điều hướng Trang & Tự Động Cuộn Đầu Trang (Routing & Auto Scroll to Top)**:
    - Điều hướng mượt mà giữa các trang: Home, Featured Projects, Contact và Trang 404 (Not Found) bằng `React Router`.
+   - **Tự động cuộn về đầu trang (Auto Scroll to Top)**: Sử dụng component wrapper `PageTransition` lắng nghe sự thay đổi đường dẫn (`location.pathname`) qua `useLocation()` để tự động cuộn màn hình lên đầu (`window.scrollTo(0, 0)`) mỗi khi chuyển trang.
    - Header điều hướng thích ứng (Responsive Navigation) với menu tự động điều chỉnh theo kích thước màn hình.
 
 2. **Chế Độ Giao Diện (Light / Dark Mode)**:
