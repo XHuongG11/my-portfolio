@@ -88,3 +88,43 @@ npm run preview
 - [Demo Portfolio](https://my-portfolio-chi-lime-94.vercel.app/)
 
 ### 📸 Ảnh Minh Họa Dự Án (Screenshots)
+
+#### Home
+
+<p align="center">
+  <img
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/home-light-page.png"
+    width="49%"
+  />
+  <img
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/home-dark-page.png"
+    width="49%"
+  />
+</p>
+
+#### Projects
+
+<p align="center">
+  <img
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/projects-page.png"
+    width="90%"
+  />
+</p>
+
+#### Filter mobile
+
+<p align="center">
+  <img
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/filter-mobile.png"
+    width="40%"
+  />
+</p>
+
+#### Contact
+
+<p align="center">
+  <img
+    src="https://github.com/XHuongG11/portfolio-assets/blob/main/contact-form.png"
+    width="90%"
+  />
+</p>
