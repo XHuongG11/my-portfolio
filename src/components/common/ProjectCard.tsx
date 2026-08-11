@@ -39,7 +39,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-[var(--text-secondary)] line-clamp-3 leading-relaxed !m-0">
+          <p className="text-sm text-[var(--text-secondary)] line-clamp-3 leading-relaxed text-justify !m-0">
             {description}
           </p>
 
@@ -77,35 +77,8 @@ function ProjectCard({ project }: ProjectCardProps) {
             </a>
           )}
 
-          {typeof links.github === "object" && (
-            <>
-              {links.github.frontend && (
-                <a
-                  href={links.github.frontend}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[var(--border)] text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--accent-border)] hover:bg-[var(--accent-bg)] transition-all duration-200"
-                >
-                  <GitBranch size={14} />
-                  <span>Frontend</span>
-                </a>
-              )}
-              {links.github.backend && (
-                <a
-                  href={links.github.backend}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[var(--border)] text-xs font-medium text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--accent-border)] hover:bg-[var(--accent-bg)] transition-all duration-200"
-                >
-                  <GitBranch size={14} />
-                  <span>Backend</span>
-                </a>
-              )}
-            </>
-          )}
-
           {/* Demo Link */}
-          {links.demo && (
+          {links.demo ? (
             <a
               href={links.demo}
               target="_blank"
@@ -115,6 +88,24 @@ function ProjectCard({ project }: ProjectCardProps) {
               <ExternalLink size={14} />
               <span>Live Demo</span>
             </a>
+          ) : (
+            <div className="relative group/tooltip ml-auto">
+              <button
+                type="button"
+                disabled
+                title="Not yet implemented"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[var(--bg-secondary)] text-[var(--text-disabled)] text-xs font-semibold border border-[var(--border)] cursor-not-allowed opacity-70"
+              >
+                <ExternalLink size={14} />
+                <span>Live Demo</span>
+              </button>
+              <div
+                role="tooltip"
+                className="absolute bottom-full right-0 mb-2 hidden group-hover/tooltip:flex items-center px-2.5 py-1 rounded-md bg-[var(--card-bg)] text-[var(--text-secondary)] text-[11px] font-medium border border-[var(--border)] shadow-md whitespace-nowrap z-20 pointer-events-none"
+              >
+                Not yet implemented
+              </div>
+            </div>
           )}
         </div>
       </div>

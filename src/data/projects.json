@@ -53,10 +53,7 @@
       "Designed UML diagrams including Class, Use Case, Sequence, and Collaboration diagrams."
     ],
     "links": {
-      "github": {
-        "backend": "https://github.com/XHuongG11/jewelry",
-        "frontend": "https://github.com/XHuongG11/shiny-website-ui"
-      },
+      "github": "https://github.com/XHuongG11/shiny-website-ui",
       "demo": ""
     }
   }

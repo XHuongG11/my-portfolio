@@ -40,43 +40,42 @@ function AboutSection({ onBack }: AboutSectionProps) {
           Back to Intro
         </button>
       )}
-
-      {/* Personal Info */}
       <Reveal direction="up">
-        <SectionCard icon={User} title="Personal Information">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <InfoItem
-              icon={Calendar}
-              label="Date of Birth"
-              value="11/11/2004"
-            />
-            <InfoItem icon={User} label="Gender" value="Female" />
-            <InfoItem
-              icon={MapPin}
-              label="Location"
-              value="Linh Xuan, Ho Chi Minh City"
-            />
-            <InfoItem
-              icon={Mail}
-              label="Email"
-              value="xhuong112004@gmail.com"
-            />
-            <InfoItem icon={Phone} label="Phone" value="(+84) 354 488 239" />
-          </div>
-        </SectionCard>
-      </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Personal Info */}
+          <SectionCard icon={User} title="Personal Information">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <InfoItem
+                icon={Calendar}
+                label="Date of Birth"
+                value="11/11/2004"
+              />
+              <InfoItem icon={User} label="Gender" value="Female" />
+              <InfoItem
+                icon={MapPin}
+                label="Location"
+                value="Linh Xuan, Ho Chi Minh City"
+              />
+              <InfoItem
+                icon={Mail}
+                label="Email"
+                value="xhuong112004@gmail.com"
+              />
+              <InfoItem icon={Phone} label="Phone" value="(+84) 354 488 239" />
+            </div>
+          </SectionCard>
 
-      {/* Career Objective */}
-      <Reveal direction="up">
-        <SectionCard icon={Target} title="Career Objective">
-          <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
-            Seeking a Frontend Developer Intern position where I can apply my
-            knowledge of React, TypeScript, and modern web technologies. I am
-            eager to learn from experienced developers, contribute to real-world
-            projects, and grow my skills in building responsive, accessible, and
-            performant user interfaces.
-          </p>
-        </SectionCard>
+          {/* Career Objective */}
+          <SectionCard icon={Target} title="Career Objective">
+            <p className="text-[var(--text-secondary)] text-justify text-sm leading-relaxed">
+              Seeking a Frontend Developer Intern position where I can apply my
+              knowledge of React, TypeScript, and modern web technologies. I am
+              eager to learn from experienced developers, contribute to
+              real-world projects, and grow my skills in building responsive,
+              accessible, and performant user interfaces.
+            </p>
+          </SectionCard>
+        </div>
       </Reveal>
 
       {/* Education */}

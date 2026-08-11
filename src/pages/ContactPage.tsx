@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { Reveal } from "../components/common/Reveal";
 
-/* ── Zod schema ──────────────────────────────── */
+/* Zod schema */
 const contactSchema = z.object({
   name: z
     .string()
@@ -23,12 +23,12 @@ const contactSchema = z.object({
   message: z
     .string()
     .min(1, "Message is required")
-    .min(10, "Message must be at least 10 characters"),
+    .min(20, "Message must be at least 20 characters"),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-/* ── Shared style constants ──────────────────── */
+/* Shared style constants */
 const inputBase = `w-full px-3.5 py-2.5 rounded-xl border border-[var(--border)]
   bg-[var(--bg-secondary)] text-[var(--text)] text-sm font-[inherit]
   outline-none transition-all duration-250
@@ -39,7 +39,7 @@ const inputBase = `w-full px-3.5 py-2.5 rounded-xl border border-[var(--border)]
 const inputError =
   "!border-red-500 focus:!shadow-[0_0_0_3px_rgba(239,68,68,0.12)]";
 
-/* ── Component ───────────────────────────────── */
+/* Component */
 function ContactPage() {
   const [sending, setSending] = useState(false);
 
